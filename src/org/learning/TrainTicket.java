@@ -7,15 +7,32 @@ public class TrainTicket {
 
         final double COST_MULTIPLIER = 0.21;
         double discountMultiplier;
-        int distance, age;
+        int distance;
+        int age;
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("How far do you travel?");
-        distance = scan.nextInt();
+        while (true) {
+            try {
+                System.out.println("How far do you travel?");
+                distance = scan.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("A number is required");
+                scan.next();
+            }
+        }
 
-        System.out.println("What is your age?");
-        age = scan.nextInt();
+        while (true) {
+            try {
+                System.out.println("What is your age?");
+                age = scan.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("A number is required");
+                scan.next();
+            }
+        }
 
         scan.close();
 
