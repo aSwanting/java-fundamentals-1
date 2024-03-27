@@ -14,24 +14,25 @@ public class FizzBuzz extends JPanel {
         for (int i = 1; i < 101; i++) {
 
             String code = "";
-            Color colorCode = new Color(173, 217, 143, 128);
+            Color colorCode = new Color(81, 189, 143, 255);
 
             if (i % 15 == 0) {
                 code = "fizzbuzz";
-                colorCode = new Color(204, 118, 232, 128);
+                colorCode = new Color(49, 113, 85, 255);
 
             } else if (i % 5 == 0) {
                 code = "buzz";
-                colorCode = new Color(62, 168, 76, 128);
+                colorCode = new Color(64, 151, 114, 255);
 
             } else if (i % 3 == 0) {
                 code = "fizz";
-                colorCode = new Color(204, 98, 23, 128);
+                colorCode = new Color(72, 170, 128, 255);
             }
 
             JLabel l = new JLabel("<html><div style='text-align:center'><p>" + code + "</p><p>" + i + "</p></div></html>");
             l.setOpaque(true);
             l.setBackground(colorCode);
+            l.setForeground(Color.white);
             l.setHorizontalAlignment(JLabel.CENTER);
             l.setBorder(BorderFactory.createCompoundBorder(
                     new EtchedBorder(),
