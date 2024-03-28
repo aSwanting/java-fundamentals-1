@@ -21,8 +21,10 @@ public class Main extends JComponent {
             double x = Math.random() * (frameW - r);
             double y = Math.random() * (frameH - r);
             // Random velocities
-            double vx = Math.random() * 8;
-            double vy = Math.random() * 8;
+            double vx = Math.random() * 8 + 1;
+            double vy = Math.random() * 8 + 1;
+            if (Math.random() > 0.5) vx *= -1;
+            if (Math.random() > 0.5) vy *= -1;
             circles[i] = new Circle(r, x, y, vx, vy); // Create a Circle object
             circles[i].fizzBuzz(circleNum); // Calculate and store FizzBuzz code
             circles[i].printProperties(circleNum); // Print circle properties
