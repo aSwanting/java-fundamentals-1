@@ -7,8 +7,7 @@ public class TrainTicket {
 
         final double COST_MULTIPLIER = 0.21;
         double discountMultiplier;
-        int distance;
-        int age;
+        int distance, age;
 
         Scanner scan = new Scanner(System.in);
 
